@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bus_monitoring
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    com.example.demo: DEBUG
+    org.springframework.security: INFO
+
+app:
+  jwt:
+    secret: mySuperSecretKeyForJWT_AtLeast32CharactersLong!
+    expiration-ms: 86400000
